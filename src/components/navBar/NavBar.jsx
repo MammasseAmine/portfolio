@@ -32,7 +32,7 @@ const NavBar = () =>{
       <Drawer className="drawer" variant='permanent' anchor="left">
         <List>
             {navItems.map(item=>(
-                <ListItem key={item.text} button onClick={()=> history.push(item.path)} className= {location.pathname == item.path ? "active" : null} >
+                <ListItem key={item.text} button onClick={()=> history.push(item.path)} className= {location.pathname === item.path ? "active" : null} >
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text}/>
                 </ListItem>
