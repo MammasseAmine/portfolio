@@ -1,0 +1,25 @@
+nav{
+  display: flex;
+}
+.drawer,.MuiDrawer-paper{
+  width: 240px;
+height: auto !important;
+margin: 15vh 10px;
+border-radius: 10px;
+
+}
+
+nav svg{
+  font-size: 25px;
+  color: var(--color1);
+}
+
+nav span{
+  font-size: 1.2rem!important;
+  font-weight: 800 !important;
+  color: var(--text-color);
+}
+
+nav .active{
+  background-color: skyblue;
+}
