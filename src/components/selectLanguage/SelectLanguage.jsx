@@ -1,4 +1,4 @@
-import {useState}  from 'react';
+import {useState, useEffect}  from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -29,6 +29,8 @@ const SelectLanguage = () =>{
     setAnchorEl(null);
   };
 
+
+
  
   return(
     <div id="Languages">
@@ -49,12 +51,12 @@ const SelectLanguage = () =>{
         MenuListProps={{'aria-labelledby': 'basic-button'}}
       >
       {Languages.map(({code,name,country_code})=>(
-        <>
+      
         
-        <MenuItem key={code} onClick={()=>{handleClose(); i18next.changeLanguage(code)}} >
+        <MenuItem key={code} onClick={()=>{handleClose(); i18next.changeLanguage(code)}}>
         <span className={`flag-icon flag-icon-${country_code}`}></span>
         &nbsp; &nbsp;{name}</MenuItem>
-        </>
+   
       ))}
        
 

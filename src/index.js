@@ -20,7 +20,7 @@ i18next
     supportedLngs: ['en', 'fr'],
     fallbackLng:"en",
     detection: {
-      order: ['cookie','path', 'htmlTag','subdomain'],
+      order: ['path','cookie','path', 'htmlTag','subdomain'],
       caches: ['cookie'],
     },
     backend: {

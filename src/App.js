@@ -6,10 +6,20 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // Css
 import './App.css';
 
+// SEO
+import {Helmet} from "react-helmet"
+
+// Translation
+import {useTranslation} from 'react-i18next'
+
 function App() {
 
+  const {t} = useTranslation()
   return (
     <div className="App">
+      <Helmet>
+        <title>{t("Home")}</title>
+      </Helmet>
        <Router>
             <Switch>
               <Layout>
@@ -20,6 +30,7 @@ function App() {
                 <Route exact path="/works" />
                 <Route exact path="/services" />
                 <Route exact path="/contact" />
+                <Route exact path="/certificate" />
               </Layout>
             </Switch>
       </Router>

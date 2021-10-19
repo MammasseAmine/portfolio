@@ -5,7 +5,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
 // React Icons
-import { FaHouseUser,FaAddressCard,FaBriefcase, FaHandshake,FaLaptopCode,FaPhoneVolume } from "react-icons/fa";
+import { FaHouseUser,FaAddressCard,FaBriefcase, FaHandshake,FaLaptopCode,FaPhoneVolume,FaDiagnoses,FaGraduationCap } from "react-icons/fa";
 
 // React
 import {useHistory, useLocation} from "react-router-dom"
@@ -21,8 +21,8 @@ const NavBar = () =>{
     {text : "Home",icon : <FaHouseUser/> ,path : "/"},
     {text : "About",icon : <FaAddressCard/>,path : "/about"},
     {text : "Experience",icon : <FaBriefcase/>,path : "/experiance"},
-    {text : "Certificate",icon : <FaBriefcase/>,path : "/experiance"},
-    {text : "Skills",icon : <FaHouseUser/>,path : "/skills"},
+    {text : "Certificate",icon : <FaGraduationCap/>,path : "/certificate"},
+    {text : "Skills",icon : <FaDiagnoses/>,path : "/skills"},
     {text : "Works",icon : <FaLaptopCode/>,path : "/works"},
     {text : "Services",icon : <FaHandshake/>,path : "/services"},
     {text : "Contact",icon : <FaPhoneVolume />,path : "/contact"},
