@@ -1,6 +1,5 @@
-// components
-import NavBar from "./components/navBar/NavBar"
-
+//  Screens
+import Layout from "./screens/Layout";
 // React
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -12,17 +11,17 @@ function App() {
   return (
     <div className="App">
        <Router>
-        <NavBar>
-          <Switch>
-            <Route exact path="/"/>
-            <Route exact path="/about" />
-            <Route exact path="/experiance" />
-            <Route exact path="/skills" />
-            <Route exact path="/works" />
-            <Route exact path="/services" />
-            <Route exact path="/contact" />
-          </Switch>
-        </NavBar>
+            <Switch>
+              <Layout>
+                <Route exact path="/"/>
+                <Route exact path="/about" />
+                <Route exact path="/experiance" />
+                <Route exact path="/skills" />
+                <Route exact path="/works" />
+                <Route exact path="/services" />
+                <Route exact path="/contact" />
+              </Layout>
+            </Switch>
       </Router>
     </div>
   );

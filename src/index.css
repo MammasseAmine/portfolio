@@ -15,3 +15,8 @@
 body{
   background-color: rgb(223, 223, 223);
 }
+
+svg{
+  font-size: 25px;
+  color: var(--color1);
+}

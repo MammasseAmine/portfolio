@@ -10,15 +10,18 @@ import { FaHouseUser,FaAddressCard,FaBriefcase, FaHandshake,FaLaptopCode,FaPhone
 // React
 import {useHistory, useLocation} from "react-router-dom"
 
-// Css
-import "./NavBar.css"
+// Translation
+import {useTranslation} from 'react-i18next'
 
 const NavBar = () =>{
 
+  const {t} = useTranslation()
+
   const navItems = [
     {text : "Home",icon : <FaHouseUser/> ,path : "/"},
-    {text : "About Me",icon : <FaAddressCard/>,path : "/about"},
+    {text : "About",icon : <FaAddressCard/>,path : "/about"},
     {text : "Experience",icon : <FaBriefcase/>,path : "/experiance"},
+    {text : "Certificate",icon : <FaBriefcase/>,path : "/experiance"},
     {text : "Skills",icon : <FaHouseUser/>,path : "/skills"},
     {text : "Works",icon : <FaLaptopCode/>,path : "/works"},
     {text : "Services",icon : <FaHandshake/>,path : "/services"},
@@ -27,6 +30,8 @@ const NavBar = () =>{
 
   const history = useHistory();
   const location = useLocation();
+
+ 
   return(
     <nav>
       <Drawer className="drawer" variant='permanent' anchor="left">
@@ -34,7 +39,7 @@ const NavBar = () =>{
             {navItems.map(item=>(
                 <ListItem key={item.text} button onClick={()=> history.push(item.path)} className= {location.pathname === item.path ? "active" : null} >
                   <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text}/>
+                  <ListItemText primary={t(item.text)}/>
                 </ListItem>
             ))}
         </List>
