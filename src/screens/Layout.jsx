@@ -8,7 +8,7 @@ const Layout = () =>{
 return(
   <>
       <SelectLanguage/>
-    <NavBar/>
+      <NavBar/>
 
   </>
 )

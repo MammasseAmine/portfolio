@@ -31,3 +31,15 @@ nav .active{
 #Languages button:after{
   content: "";
 }
+
+
+/* Responsive */
+@media screen and (max-width: 700px){
+  .drawer,.MuiDrawer-paper{
+    width: 60px;
+    overflow: hidden;
+  }
+  .drawer .MuiTypography-root{
+    display: none;
+  }
+}
