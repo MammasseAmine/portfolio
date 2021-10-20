@@ -5,7 +5,7 @@
   max-width: 100% ;
 text-align: center;
 margin:auto ;
-margin-top: 8vh;
+margin-top: 6vh;
 }
 
   #header > * {
@@ -67,8 +67,8 @@ margin-top: 8vh;
 
     #header .content p {
       text-transform: uppercase;
-      letter-spacing: 0.2rem;
-      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      font-size: 1rem;
       line-height: 2;
       margin-top: 1rem;
     }
