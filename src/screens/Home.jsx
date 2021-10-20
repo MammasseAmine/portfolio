@@ -9,7 +9,7 @@ const About = () =>{
   return(
     
     <header id="header">
-    <div className="logo" style= {{backgroundImage: "url('/assests/about/me.jpg')"}}>
+    <div className="logo" style= {{backgroundImage: "url('portfolio/assests/about/me.jpg')"}}>
     </div>
     <div className="content">
       <div className="inner">
