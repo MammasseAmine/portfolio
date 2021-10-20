@@ -12,6 +12,10 @@ import {Helmet} from "react-helmet"
 // Translation
 import {useTranslation} from 'react-i18next'
 
+// Components
+//import About from "./screens/About"
+import Home from "./screens/Home"
+
 function App() {
 
   const {t} = useTranslation()
@@ -23,8 +27,8 @@ function App() {
        <Router>
             <Switch>
               <Layout>
-                <Route exact path="/"/>
-                <Route exact path="/about" />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about"  />
                 <Route exact path="/experiance" />
                 <Route exact path="/skills" />
                 <Route exact path="/works" />

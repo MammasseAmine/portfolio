@@ -1,12 +1,12 @@
-nav{
-  display: flex;
-}
+.row{display:flex; flex-direction:row;}
+
+
 .drawer,.MuiDrawer-paper{
   width: 240px;
 height: auto !important;
-margin: 15vh 10px;
+margin: 15vh 20px;
 border-radius: 10px;
-
+margin-top: 25vh;
 }
 
 nav span{
@@ -20,16 +20,14 @@ nav .active{
 }
 
 #Languages{
-  float: right;
-  margin: 12px 20px;
+  position: absolute;
+ right: 10px;
+ top: 30px;
 }
 
 #Languages svg{
-  font-size: 30px !important;
-}
-
-#Languages button:after{
-  content: "";
+  font-size: 40px !important;
+  color: white;
 }
 
 
@@ -38,8 +36,13 @@ nav .active{
   .drawer,.MuiDrawer-paper{
     width: 60px;
     overflow: hidden;
+
   }
   .drawer .MuiTypography-root{
     display: none;
   }
 }
+
+
+
+

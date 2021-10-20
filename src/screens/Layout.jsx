@@ -1,14 +1,23 @@
+
 import NavBar from "../components/navBar/NavBar"
 import SelectLanguage from "../components/selectLanguage/SelectLanguage"
+
+//import Darkmode from 'darkmode-js';
+
 
 // Css
 import "./Layout.css"
 
-const Layout = () =>{
+const Layout = (props) =>{
+
 return(
   <>
-      <SelectLanguage/>
-      <NavBar/>
+      
+        <div className="row">
+        <SelectLanguage/>
+          <NavBar/>
+            {props.children}
+        </div>
 
   </>
 )

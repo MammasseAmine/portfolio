@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "darkmode-js": "^1.5.7",
     "flag-icon-css": "^3.5.0",
     "i18next": "^21.3.2",
     "i18next-browser-languagedetector": "^6.1.2",

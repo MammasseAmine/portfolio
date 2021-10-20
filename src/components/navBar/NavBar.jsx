@@ -4,6 +4,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
+
+
 // React Icons
 import { FaHouseUser,FaAddressCard,FaBriefcase, FaHandshake,FaLaptopCode,FaPhoneVolume,FaDiagnoses,FaGraduationCap } from "react-icons/fa";
 
@@ -33,6 +35,7 @@ const NavBar = () =>{
 
  
   return(
+
     <nav>
       <Drawer className="drawer" variant='permanent' anchor="left">
         <List>

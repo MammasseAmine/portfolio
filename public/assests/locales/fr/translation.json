@@ -6,5 +6,8 @@
   "Skills" : "Compétences",
   "Services" : "Services",
   "Works":"Travaux",
-  "Contact" : "Contact"
+  "Contact" : "Contact",
+
+  "Home_description" : "Bonjour, je m'appelle Amine et je suis un développeur Web expérimenté. Je développe des sites Web impressionnants et réactifs, avec des API intégrées et des plugins personnalisés. J'excelle à aider les clients à transformer leurs idées en réalité, alors passons du bon temps à construire nos rêves de sites Web ensemble",
+  "CV": "Télécharger le CV"
 }
