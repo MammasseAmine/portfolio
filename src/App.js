@@ -27,7 +27,7 @@ function App() {
        <Router>
             <Switch>
               <Layout>
-                <Route exact path="/" component={Home} />
+                <Home/>
                 <Route exact path="/about"  />
                 <Route exact path="/experiance" />
                 <Route exact path="/skills" />
