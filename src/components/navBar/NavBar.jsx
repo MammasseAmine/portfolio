@@ -15,6 +15,9 @@ import {useHistory, useLocation} from "react-router-dom"
 // Translation
 import {useTranslation} from 'react-i18next'
 
+// Animation
+import {motion } from "framer-motion"
+
 const NavBar = () =>{
 
   const {t} = useTranslation()
@@ -36,7 +39,7 @@ const NavBar = () =>{
  
   return(
 
-    <nav>
+    <motion.nav initial={{y:"-100vh"}} animate={{y:0}}>
       <Drawer className="drawer" variant='permanent' anchor="left">
         <List>
             {navItems.map(item=>(
@@ -47,7 +50,7 @@ const NavBar = () =>{
             ))}
         </List>
       </Drawer>
-    </nav>
+    </motion.nav>
   )
 }
 

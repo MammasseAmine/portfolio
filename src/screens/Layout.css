@@ -4,9 +4,10 @@
 .drawer,.MuiDrawer-paper{
   width: 240px;
 height: auto !important;
-margin: 15vh 20px;
+margin: 0 20px;
 border-radius: 10px;
 margin-top: 25vh;
+
 }
 
 nav span{

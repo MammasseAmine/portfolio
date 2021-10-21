@@ -12,6 +12,9 @@ import { FaGlobeEurope} from "react-icons/fa";
 // Translation
 import i18next from 'i18next'
 
+// Animation
+import {motion } from "framer-motion"
+
 const SelectLanguage = () =>{
 
   const Languages = [
@@ -33,13 +36,14 @@ const SelectLanguage = () =>{
 
  
   return(
-    <div id="Languages">
+    <motion.div id="Languages"   whileHover={{scale:1.2}}>
        <Button
         id="basic-button"
         aria-controls="basic-menu"
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+      
       >
         <FaGlobeEurope/> 
       </Button>
@@ -61,7 +65,7 @@ const SelectLanguage = () =>{
        
 
       </Menu>
-    </div>
+    </motion.div>
   )
 }
 

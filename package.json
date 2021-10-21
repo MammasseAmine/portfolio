@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^12.1.10",
     "darkmode-js": "^1.5.7",
     "flag-icon-css": "^3.5.0",
+    "framer-motion": "^4.1.17",
     "i18next": "^21.3.2",
     "i18next-browser-languagedetector": "^6.1.2",
     "i18next-http-backend": "^1.3.1",

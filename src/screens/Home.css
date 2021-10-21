@@ -5,7 +5,7 @@
   max-width: 100% ;
 text-align: center;
 margin:auto ;
-margin-top: 6vh;
+margin-top: 2vh;
 }
 
   #header > * {
@@ -52,10 +52,11 @@ margin-top: 6vh;
     border-left-width : 0px;
     border-right-width : 0px;
     max-width: 100%;
+
   }
 
     #header .content .inner {
-      color: white;
+      color: #fff;
       padding: 2rem;
       max-height: 50rem;
       overflow: hidden;

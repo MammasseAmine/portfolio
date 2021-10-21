@@ -13,7 +13,7 @@ import {Helmet} from "react-helmet"
 import {useTranslation} from 'react-i18next'
 
 // Components
-//import About from "./screens/About"
+import About from "./screens/About"
 import Home from "./screens/Home"
 
 function App() {
@@ -27,8 +27,9 @@ function App() {
        <Router>
             <Switch>
               <Layout>
-                <Home/>
-                <Route exact path="/about"  />
+                {/* <Home/> */}
+                <Route exact path={["/portfolio", "/"] } component={Home}/>
+                <Route exact path="/about"  component={About}/>
                 <Route exact path="/experiance" />
                 <Route exact path="/skills" />
                 <Route exact path="/works" />
