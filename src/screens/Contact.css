@@ -1,0 +1,184 @@
+#contact{
+  position: relative;
+  top : 15vh;
+  min-height: 500px;
+  display: flex;
+  z-index: 1000;
+margin-right: 40px;
+padding-left: 0;
+}
+
+#contact .contactInfo{
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background-color: rgb(129, 129, 129);
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#contact .contactInfo h2{
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+}
+#contact .contactInfo .infos .css-cveggr-MuiListItemIcon-root{
+  min-width: 38px !important
+}
+#contact .contactInfo .socialMedia{
+  display: flex;
+  margin-left: -25px;
+}
+
+.socialMedia .MuiListItemIcon-root{
+  min-width: 0px !important;
+}
+
+#contact .contactForm{
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.30);
+}
+
+#contact .contactForm h2{
+
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#contact .contactForm .formBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+#contact .contactForm .formBox .inputBox{
+  margin-bottom: 35px;
+}
+
+#contact .contactForm .formBox .inputBox.w50{
+  width: 47%;
+}
+
+#contact .contactForm .formBox .inputBox.w100{
+  width: 100%;
+}
+
+#contact .contactForm .formBox .inputBox input,#contact .contactForm .formBox .inputBox .textarea{
+width: 100%;
+resize: none;  
+padding: 5px 0;
+border: none;
+outline: none;
+
+}
+
+#contact .contactForm .formBox .inputBox .textarea{
+  height: 121px;
+}
+
+
+
+/* Responsive */
+@media (max-width : 1200px){
+ #contact{
+    width: 90%;
+    min-width: auto ;
+    margin: 20px ;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  }
+  #contact .contactInfo{
+    top: 0;
+    height: 550px;
+    position: relative;
+    box-shadow: none;
+  }
+#contact .contactForm{
+  position: relative;
+  width: calc(100% - 350px);
+  margin-left: 0;
+  padding: 40px;
+  height: 550px;
+  box-shadow: none;
+}
+  }
+
+@media (max-width : 990px){
+#contact {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#contact .contactInfo{
+  width: 90%;
+  height: auto  !important;
+  flex-direction: row;
+}
+#contact .contactForm{
+  width: 90%;
+  height: auto;
+}
+#contact .contactInfo ul.socialMedia{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+}
+
+@media (max-width : 760px){
+  #contact{
+    width: 100%;
+    margin-left: -11px;
+  }
+  #contact .contactForm{
+    padding: 25px;
+  }
+  #contact .contactInfo{
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+  #contact .contactInfo  span{
+    word-break: break-word;
+    
+  }
+  #contact .contactInfo ul.socialMedia{
+      margin-top: 10px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+
+  }
+
+  #contact .contactForm .formBox .inputBox.w50{
+    width: 100%;
+  }
+ 
+}
+
+
+
+
+
+
+
+

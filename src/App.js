@@ -1,5 +1,6 @@
 //  Screens
 import Layout from "./screens/Layout";
+
 // React
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -15,6 +16,7 @@ import {useTranslation} from 'react-i18next'
 // Components
 import About from "./screens/About"
 import Home from "./screens/Home"
+import Contact from "./screens/Contact"
 
 function App() {
 
@@ -34,7 +36,7 @@ function App() {
                 <Route exact path="/skills" />
                 <Route exact path="/works" />
                 <Route exact path="/services" />
-                <Route exact path="/contact" />
+                <Route exact path="/contact" component={Contact}/>
                 <Route exact path="/certificate" />
               </Layout>
             </Switch>
