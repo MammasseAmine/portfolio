@@ -18,5 +18,22 @@
   "Email": "Email",
   "Mobile Number" : "Mobile Number",
   "Your Message Here" : "Your Message Here",
-  "Send" : "Send"
+  "Send" : "Send",
+
+  "rqLname" : "Please Tell Us Your First Name",
+  "strFname" : "Please Enter a Valid First Name",
+  "minFname" : "First Name must be at least 3 characters",
+
+  "rqFname" : "Please Tell Us Your Last Name",
+  "strLname" : "Please Enter a Valid Last Name",
+  "minLname" : "Last Name must be at least 3 characters",
+
+  "rqEmail" : "Please Tell Us Your Email",
+  "Vemail" : "Must be a valid E-mail",
+
+  "Vmobile" : "Please Enter a valid Phone Number",
+
+  "rqMsg" : "Please Tell Us Your Message",
+  "Vmsg" : "Must be at least 10 characters"
+
 }

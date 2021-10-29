@@ -18,7 +18,24 @@
   "Email": "E-mail",
   "Mobile Number" : "Numéro de portable",
   "Your Message Here" : "Votre Message Ici",
-  "Send" : "Envoyer"
+  "Send" : "Envoyer",
+
+  "rqFname" : "Veuillez nous indiquer votre prénom",
+  "strFname" : "Veuillez entrer un prénom valide",
+  "minFname" : "Le prénom doit comporter au moins 3 caractères",
+
+
+  "rqLname" : "Veuillez nous indiquer votre nom de famille",
+  "strLname" : "Merci d'entrer un nom de famille valide",
+  "minLname" : "Le nom de famille doit comporter au moins 3 caractères",
+
+  "rqEmail" : "Veuillez nous indiquer votre e-mail",
+  "Vemail" : "Doit être une adresse e-mail valide",
+
+  "Vmobile" : "Veuillez entrer un numéro de téléphone valide",
+
+  "rqMsg" : "Veuillez entrer Votre Message",
+  "Vmsg" : "Doit comporter au moins 10 caractères"
 
 
 }
