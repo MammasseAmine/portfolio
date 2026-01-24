@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { client } from "@/sanity/client";
 
-export default function Hero() {
+export default async function Hero() {
+    const data = await client.fetch('*[_type == "only_texts"][0]');
+
     return (
         <section className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 relative">
             {/* Background Decor */}
@@ -14,8 +17,8 @@ export default function Hero() {
                 <h1 className="text-5xl md:text-7xl font-bold mb-4 tracking-tight">
                     Amine <span className="gradient-text">Mammasse</span>
                 </h1>
-                <p className="text-2xl md:text-3xl font-light text-gray-300 mb-8">
-                    AI & Data Science Engineer | Full Stack Developer & Trainer
+                <p className="text-2xl md:text-xl font-light text-gray-300 mb-8 italic">
+                    {data?.hero_text || "AI & Data Science Engineer | Full Stack Developer & Trainer"}
                 </p>
 
                 <div className="flex gap-4">
