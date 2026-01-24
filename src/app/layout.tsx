@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google"; // Step 4: Import Inter
 import "./globals.css";
+import OrbNav from "@/components/OrbNav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`} // Step 4: Apply Inter
       >
         {children}
+        <OrbNav />
       </body>
     </html>
   );
