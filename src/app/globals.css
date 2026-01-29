@@ -33,3 +33,16 @@ body {
 .animate-float {
     animation: float 3s ease-in-out infinite;
 }
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 30s linear infinite;
+}
