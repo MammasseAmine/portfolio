@@ -7,6 +7,7 @@ import about_stats from './src/sanity/schemas/about_stats'
 import about_realms from './src/sanity/schemas/about_realms'
 
 import skills from './src/sanity/schemas/skills'
+import certifications from './src/sanity/schemas/certifications'
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
@@ -17,7 +18,7 @@ export default defineConfig({
     dataset,
     // Add and edit the content schema in the 'schema' plugin
     schema: {
-        types: [project, only_texts, about_stats, about_realms, skills],
+        types: [project, only_texts, about_stats, about_realms, skills, certifications],
     },
     plugins: [
         structureTool(),

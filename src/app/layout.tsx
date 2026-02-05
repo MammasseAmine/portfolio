@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Step 4: Import Inter
+import { Inter, Space_Grotesk } from "next/font/google"; // Step 4: Import Inter
 import "./globals.css";
 import OrbNav from "@/components/OrbNav";
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
 });
 
@@ -21,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`} // Step 4: Apply Inter
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`} // Step 4: Apply Inter
       >
         {children}
         <OrbNav />
