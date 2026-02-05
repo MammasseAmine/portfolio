@@ -27,20 +27,47 @@ export default function ContactPage() {
     const subjectRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        if (!nameRef.current?.value || !emailRef.current?.value || !messageRef.current?.value) {
+
+        const nameBody = nameRef.current?.value;
+        const emailBody = emailRef.current?.value;
+        const subjectBody = subjectRef.current?.value;
+        const messageBody = messageRef.current?.value;
+
+        if (!nameBody || !emailBody || !messageBody) {
             alert("Please fill in all required fields");
             return;
         }
 
         setIsSubmitting(true);
 
-        // Simulate API call
-        setTimeout(() => {
+        try {
+            const response = await fetch("https://formspree.io/f/xykdgjvr", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: nameBody,
+                    email: emailBody,
+                    subject: subjectBody || "No Subject",
+                    message: messageBody,
+                }),
+            });
+
+            if (response.ok) {
+                setIsSuccess(true);
+            } else {
+                const data = await response.json();
+                alert(data.error || "Something went wrong. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Formspree Error:", error);
+            alert("Failed to send message. Please check your internet connection.");
+        } finally {
             setIsSubmitting(false);
-            setIsSuccess(true);
-        }, 1600);
+        }
     };
 
     const resetForm = () => {
@@ -154,6 +181,7 @@ export default function ContactPage() {
                                                         ref={nameRef}
                                                         type="text"
                                                         id="name"
+                                                        name="name"
                                                         className="w-full bg-zinc-950/50 border border-zinc-800 focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/10 rounded-xl px-5 py-4 text-zinc-200 placeholder-zinc-700 outline-none transition-all duration-300"
                                                         placeholder="Full Name"
                                                         required
@@ -164,6 +192,7 @@ export default function ContactPage() {
                                                         ref={emailRef}
                                                         type="email"
                                                         id="email"
+                                                        name="email"
                                                         className="w-full bg-zinc-950/50 border border-zinc-800 focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/10 rounded-xl px-5 py-4 text-zinc-200 placeholder-zinc-700 outline-none transition-all duration-300"
                                                         placeholder="Email Address"
                                                         required
@@ -175,6 +204,7 @@ export default function ContactPage() {
                                                 ref={subjectRef}
                                                 type="text"
                                                 id="subject"
+                                                name="subject"
                                                 className="w-full bg-zinc-950/50 border border-zinc-800 focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/10 rounded-xl px-5 py-4 text-zinc-200 placeholder-zinc-700 outline-none transition-all duration-300"
                                                 placeholder="Subject"
                                             />
@@ -182,6 +212,7 @@ export default function ContactPage() {
                                             <textarea
                                                 ref={messageRef}
                                                 id="message"
+                                                name="message"
                                                 rows={5}
                                                 className="w-full bg-zinc-950/50 border border-zinc-800 focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/10 rounded-xl px-5 py-4 text-zinc-200 placeholder-zinc-700 outline-none resize-none transition-all duration-300"
                                                 placeholder="Your Message..."
