@@ -157,6 +157,7 @@ const ServiceItem = ({
                 ) : (
                     <Link
                         href={`/contact?subject=${encodeURIComponent(service.title)}`}
+                        target="_blank"
                         className="mr-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-outfit font-semibold text-sm uppercase tracking-widest hover:from-white hover:to-white transition-all duration-300 rounded shadow-[0_0_15px_rgba(34,211,238,0.4)]"
                     >
                         Contact Me
@@ -202,20 +203,28 @@ const ServiceItem = ({
                                 transition={{ duration: 0.3 }}
                                 className="flex flex-col space-y-6"
                             >
-                                {service.subCategories?.[activeSubTab].items.map((item, idx) => (
-                                    <div key={idx} className="flex items-center group/sub">
-                                        <span className="font-outfit text-lg text-white/70 group-hover/sub:text-white transition-colors">
-                                            {item}
-                                        </span>
-                                        <div className="flex-grow mx-4 border-b border-dotted border-white/20 h-0 mt-3" />
-                                        <Link
-                                            href={`/contact?subject=${encodeURIComponent(item)}`}
-                                            className="text-cyan-400 font-outfit text-sm uppercase tracking-[0.2em] hover:text-white transition-colors whitespace-nowrap"
-                                        >
-                                            Contact Me
-                                        </Link>
-                                    </div>
-                                ))}
+                                {service.subCategories?.[activeSubTab].items.map((item, idx) => {
+                                    const isResponsiveWebsite = item === "Full Responsive Website (Mobile + Tablet + Desktop)";
+                                    const contactLink = isResponsiveWebsite
+                                        ? `/contact?subject=Full Responsive Website&message=${encodeURIComponent("Hi, I'm interested in building a full responsive website. Could we discuss the details? WhatsApp: [Please input your WhatsApp number here for faster communication]")}`
+                                        : `/contact?subject=${encodeURIComponent(item)}`;
+
+                                    return (
+                                        <div key={idx} className="flex items-center group/sub">
+                                            <span className="font-outfit text-lg text-white/70 group-hover/sub:text-white transition-colors">
+                                                {item}
+                                            </span>
+                                            <div className="flex-grow mx-4 border-b border-dotted border-white/20 h-0 mt-3" />
+                                            <Link
+                                                href={contactLink}
+                                                target="_blank"
+                                                className="text-cyan-400 font-outfit text-sm uppercase tracking-[0.2em] hover:text-white transition-colors whitespace-nowrap"
+                                            >
+                                                Contact Me
+                                            </Link>
+                                        </div>
+                                    );
+                                })}
                             </motion.div>
                         </AnimatePresence>
                     </motion.div>

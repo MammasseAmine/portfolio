@@ -31,8 +31,13 @@ export default function ContactPage() {
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const subject = params.get("subject");
+        const message = params.get("message");
+
         if (subject && subjectRef.current) {
             subjectRef.current.value = subject;
+        }
+        if (message && messageRef.current) {
+            messageRef.current.value = message;
         }
     }, []);
 
