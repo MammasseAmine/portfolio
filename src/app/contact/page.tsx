@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, FormEvent } from "react";
+import { useState, useRef, FormEvent, useEffect } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import {
     FaLinkedin,
@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import Link from "next/link";
 import { RiLoader4Fill } from "react-icons/ri";
+import { useSearchParams } from "next/navigation";
 
 export default function ContactPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -26,6 +27,14 @@ export default function ContactPage() {
     const emailRef = useRef<HTMLInputElement>(null);
     const subjectRef = useRef<HTMLInputElement>(null);
     const messageRef = useRef<HTMLTextAreaElement>(null);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const subject = params.get("subject");
+        if (subject && subjectRef.current) {
+            subjectRef.current.value = subject;
+        }
+    }, []);
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
